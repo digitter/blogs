@@ -1,0 +1,3 @@
+[submodule "gatsby-media"]
+	path = gatsby-media
+	url = git@github.com:digitter/gatsby-media.git
