@@ -13,7 +13,7 @@ Rubyは初心者でも始めやすい言語ではあるのでさっそく実際�
 [Ruby公式サイト](https://www.ruby-lang.org/ja/)の[試してみる!(ブラウザから)](https://try.ruby-lang.org/)のページでプログラムを実行することができます。
 EditorにRubyのプログラムを書いてRunボタンを押して実行すると、Outputに実行結果が表示されます。
 
-![画像](./image/get_started_ruby.png)
+![画像](image/get_started_ruby.png)
 
 Editorではデフォルトで以下のようにコードがあります。
 `do ... end` 内の処理を３回行うということが簡単にわかると思います。
@@ -61,4 +61,8 @@ Rubyは少ない記述かつ、人間が直感的にコードを理解しやす�
 C言語はゲームや家電製品、や機械の制御装置などに利用されたりしています。
 対してRubyはRuby on Rails というwebアプリケーションフレームワークと共に用いられる事が多いです。先ほど述べたようなwebサービスの例ではRuby on Railsが利用されています。
 
-次回はRubyの基本的なコンセプトから学んでいきます !
+次回はRubyの基本的な文法から学んでいきます !
+
+
+run rubyよい
+https://runrb.io/
