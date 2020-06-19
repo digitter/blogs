@@ -79,6 +79,7 @@ puts Name
 データには色々なデータの形があります。
 それがデータ型です。単に型と言われたりします。
 以下がデータ型の一例です。
+
 ```ruby
 1         # integer型
 'Hello !' # string型
@@ -87,6 +88,7 @@ false     # boolean型
 ```
 
 同じデータ型で計算してみます。
+
 ```ruby
 int1 = 1
 int2 = 2
@@ -116,6 +118,7 @@ sum + greeting
 実は、数字を文字列に変換する方法がいくつかありますので例をあげます。
 
 - 数値を文字列に変換して計算する
+
 ```ruby
 age = 10.to_s # to_s は 値をstring型に変換してくれます。
 greeting = 'I am ' + age + ' years old'
@@ -124,6 +127,7 @@ puts greeting
 ```
 
 - 文字列の中に式を展開させる
+
 ```ruby
 age = 10
 greeting = "I am #{age} years old"
@@ -133,6 +137,7 @@ puts greeting
 
 ## ● 数値計算 Math
 - 足し算、引き算、掛け算、割り算
+
 ```ruby
 x = 5
 y = 3
@@ -148,6 +153,7 @@ puts x/y
 ```
 
 *小数点まで表示したい場合は注意が必要です。
+
 ```ruby
 x=5.0
 y=3
@@ -156,6 +162,7 @@ puts x/y
 ```
 
 *余りの数を取得したい場合は`%`を利用します
+
 ```ruby
 x=9
 y=5
