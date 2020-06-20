@@ -5,6 +5,25 @@
 >2. プロトコル: モデルを構成する各階層に別れたレイヤ、各レイヤで動作するもの
 >3. PDU: 各プロトコルで扱うデータ構造
 
+## 規模に応じた、色々な(コンピューターの)ネットワーク
+- LAN (local area network)
+> 自宅、企業や施設内など、比較的狭い空間にある機器同士をつなぐネットワーク
+- WAN (wide area network)
+>地理的に離れた場所にある機器同士を繋いだ比較的大規模なネットワーク
+- インターネット(internet)
+>複数のLANやWANを繋いだ世界規模のネットワーク
+
+## 通信のルール
+複数のLANを繋げるにはコンピューター間でデータのやりとりを統一する必要がある。
+通信の一連の流れを統一した手続きに基づいて行うTCP / IPという仕組みが誕生した。
+
+## ちなみにIP/TCPによって実現した通信サービスの例が以下
+- www
+- 電子メール
+- ファイル共有、転送
+- 遠隔操作
+- IP電話
+
 ## 色々なネットワークモデル
 ISO(international organization for standardization)がベンダに依存しない形でシステムを接続するためにOSI(open system interconnection)という参照モデルを策定しました。
 ただし実用面では普及しなかったため、別の組織が新しくTCP/IPモデルを考案しました。
@@ -13,6 +32,7 @@ ISO(international organization for standardization)がベンダに依存しな�
 ![画像](image/osi_vs_tcp_ip.jpg)
 
 `TCP / IPモデル`
+
 ```
   1.アプリケーション層
       (HTTP FTP SMTP...)
@@ -27,8 +47,7 @@ ISO(international organization for standardization)がベンダに依存しな�
       (Wi-Fi イーサネット ...)
 ```
 
-## PDU
-- 概要
+## PDUの概要
 
 ネットワーク上でのデータ送信はデータそのもの以外に、データを運ぶためのデータも必要になる。例えば、アドレスを特定したり、エラーチェックするものがあります。
 それらをパケットに分けて送信します。

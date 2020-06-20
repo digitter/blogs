@@ -1,4 +1,4 @@
-# IP TCPの概要
+<!-- # IP TCPの概要
 - internet protocal
 - transmission protocol
 
@@ -79,4 +79,4 @@
             |ヘッダ｜   データ   |トレーラ|
 
                       (受信側)
-```
+``` -->
