@@ -1,9 +1,3 @@
-# Blogs
-
-Digitter info
-
-note
-
 # 見出し
 
 ## セクション
