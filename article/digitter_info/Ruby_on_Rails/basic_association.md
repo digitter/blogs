@@ -68,10 +68,10 @@ Loading development environment (Rails 5.2.4.3)
 
 [1] pry(main)> user_instance = User.find(1)
   User Load (0.5ms)  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?  [["id", 1], ["LIMIT", 1]]
-=> #<user id: 1, name: 'メンター太郎', introduction: 'Rubyが得意です', ... >
+=> #<User id: 1, name: 'メンター太郎', introduction: 'Rubyが得意です', ... >
 
 [2] pry(main)> user_instance.books
   Book Load (0.7ms)  SELECT "books".* FROM "books" WHERE "books"."user_id" = ?  [["user_id", 1]]
-=> [#<book id: 1, title: 'HTML/CSSデザインパターン', body: '面白かった', user_id: 1, ... >,
-  #<book id: 2, title: 'HTML/CSSデザインパターン', body: '難しかった', user_id: 1, ... ]
+=> [#<Book id: 1, title: 'HTML/CSSデザインパターン', body: '面白かった', user_id: 1, ... >,
+  #<Book id: 2, title: 'HTML/CSSデザインパターン', body: '難しかった', user_id: 1, ...> ]
 ```
