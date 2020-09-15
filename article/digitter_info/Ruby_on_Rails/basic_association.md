@@ -18,11 +18,15 @@ footer: "by kazuki tanida"
 
 ---
 
-## アソシエーションの設定は2つだけ
->モデルにhas_many, belongs_toの設定を定義する
+## アソシエーションの設定は大きく捉えて2つだけ
+1. モデルに関係性を定義
+>Userモデルにhas_many :books の設定を定義する
+>Bookモデルにbelongs_to :user の設定を定義する
+
+2. idレベルで紐付け(主キーと外部キー)
 >Nが相手のidを `相手のモデル名_idに` 保持している
 
-### users のデータ
+### users のデータがあるとします
 
 ```
 #<user id: 1, name: 'メンター太郎', introduction: 'Rubyが得意です', ... >
@@ -32,7 +36,7 @@ footer: "by kazuki tanida"
 .
 ```
 
-### books のデータ
+### books のデータがあるとします
 > user_idの値にuserのidを保持している
 
 ```
