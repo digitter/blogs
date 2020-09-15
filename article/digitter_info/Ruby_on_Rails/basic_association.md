@@ -5,7 +5,6 @@ footer: "by kazuki tanida"
 ---
 
 <!-- prerender: true -->
-<!-- class: invert -->
 
 <style>
   section {
@@ -32,20 +31,14 @@ footer: "by kazuki tanida"
 #<user id: 1, name: 'メンター太郎', introduction: 'Rubyが得意です', ... >
 #<user id: 2, name: 'メンター二郎', introduction: 'HTML/CSSが得意です', ... >
 #<user id: 3, name: 'プロメンター', introduction: 'よろしく！', ... >
-.
-.
 ```
 
 ### books のデータがあるとします
-> user_idの値にuserのidを保持している
 
 ```
   #<book id: 1, title: 'HTML/CSSデザインパターン', body: '面白かった', user_id: 1, ... >
   #<book id: 2, title: 'HTML/CSSデザインパターン', body: '難しかった', user_id: 1, ... >
   #<book id: 3, title: 'HTML/CSSデザインパターン', body: '面白かった', user_id: 2, ... >
-  #<book id: 4, title: 'HTML/CSSデザインパターン', body: '基礎がわかった', user_id: 3, ... >
-  .
-  .
 ```
 
 ---
@@ -60,8 +53,7 @@ footer: "by kazuki tanida"
 
 ---
 
-## userインスタンスが `#<User id: 1, name: 'メンター太郎', introduction: 'Rubyが得意です', ... >`の時...
-
+## 実際に実験してみる
 `rails console` で実験してみると userから2つのbookを割り出せました。
 
 ```
