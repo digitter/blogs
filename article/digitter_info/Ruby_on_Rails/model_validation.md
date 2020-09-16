@@ -1,7 +1,6 @@
 ---
 marp: true
 paginate: true
-footer: "@pub_kazuki"
 ---
 
 <!-- prerender: true -->
@@ -39,11 +38,12 @@ end
 ```
 
 #### validation実行のタイミング
-> Bookが `データベースに保存される前` に、状態をチェックします
+> Bookが `データベースに保存される前` に状態をチェックします
 
 ---
 
 ## 実際に空っぽの状態で保存しようとしてみる
+rails consoleで実験してみます
 
 ```
 ❯ rails c
