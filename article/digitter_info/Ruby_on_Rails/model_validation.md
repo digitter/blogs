@@ -1,6 +1,7 @@
 ---
 marp: true
 paginate: true
+footer: 'kazuki tanida'
 ---
 
 <!-- prerender: true -->
