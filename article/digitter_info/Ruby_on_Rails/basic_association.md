@@ -22,33 +22,43 @@ footer: "by kazuki tanida"
 >Userモデルにhas_many :books の設定を定義する
 >Bookモデルにbelongs_to :user の設定を定義する
 
-2. idレベルで紐付け(主キーと外部キー)
->Nが相手のidを `相手のモデル名_idに` 保持している
+2. idレベルで紐付け(主キーと外部キーの紐付け)
+>「Nが」`相手のid`を `相手のモデル名_idに` 保持している
+
+---
 
 ### users のデータがあるとします
 
 ```
-#<user id: 1, name: 'メンター太郎', introduction: 'Rubyが得意です', ... >
+> rails c
+
+> User.all # データベースから全てのUserを取得
+
+[#<user id: 1, name: 'メンター太郎', introduction: 'Rubyが得意です', ... >
 #<user id: 2, name: 'メンター二郎', introduction: 'HTML/CSSが得意です', ... >
-#<user id: 3, name: 'プロメンター', introduction: 'よろしく！', ... >
+#<user id: 3, name: 'プロメンター', introduction: 'よろしく！', ... >]
 ```
 
 ### books のデータがあるとします
-
+`相手のモデル名＿id` は ここでは `user_id`
 ```
-  #<book id: 1, title: 'HTML/CSSデザインパターン', body: '面白かった', user_id: 1, ... >
-  #<book id: 2, title: 'HTML/CSSデザインパターン', body: '難しかった', user_id: 1, ... >
-  #<book id: 3, title: 'HTML/CSSデザインパターン', body: '面白かった', user_id: 2, ... >
+> rails c
+
+> Book.all # データベースから全てのBookを取得
+
+[#<book id: 1, title: 'HTML/CSSデザインパターン', body: '面白かった', user_id: 1, ... >
+#<book id: 2, title: 'HTML/CSSデザインパターン', body: '難しかった', user_id: 1, ... >
+#<book id: 3, title: 'HTML/CSSデザインパターン', body: '面白かった', user_id: 2, ... >]
 ```
 
 ---
 
 ## アソシエーションで嬉しいこととは？
 
-`userインスタンス.books`
+`userインスタンス.books` で
   >紐づいたbookを全て取得できる
 
-`bookインスタンス.user`
+`bookインスタンス.user` で
   >紐づいたuserを一人取得できる
 
 ---
