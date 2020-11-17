@@ -6,7 +6,7 @@ footer: "by kazuki tanida"
 
 <!-- prerender: true -->
 
-Rails N+1問題
+# Rails N+1問題
 (user:book / 1:N) を想定
 
 ---

@@ -81,3 +81,13 @@ Loading development environment (Rails 5.2.4.3)
 => [#<Book id: 1, title: 'HTML/CSSデザインパターン', body: '面白かった', user_id: 1, ... >,
   #<Book id: 2, title: 'HTML/CSSデザインパターン', body: '難しかった', user_id: 1, ...> ]
 ```
+
+---
+## 参考
+
+- Active Record の基礎 - スキーマのルール
+https://railsguides.jp/active_record_basics.html#%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%9E%E3%81%AE%E3%83%AB%E3%83%BC%E3%83%AB
+
+- Active Record の関連付け
+https://railsguides.jp/association_basics.html
+
