@@ -8,7 +8,7 @@ footer: "by kazuki tanida"
 <!-- prerender: true -->
 <!-- class: invert -->
 
-# Ruby、Rails初心者が知っといたほうが良いこと
+# Ruby、Rails初学者向け - Gem、Bundlerの仕組み
 
 ---
 ## Package managing
