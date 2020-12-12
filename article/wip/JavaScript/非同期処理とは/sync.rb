@@ -1,13 +1,19 @@
-puts '1'
+def show_num(num)
+  num
+end
 
-sleep(3)
-puts '2'
+def wait_three_second(num)
+  sleep(3)
+  puts num
+end
 
-puts '3'
-
-# 同期とは、コンピュータ関係では、
-# プロセスなどといった複数のエージェントの動作について、
-# 時系列的にタイミングを合わせる制御
-
-# 同期的な処理
-
+puts show_num(1)
+puts show_num(2)
+puts show_num(3)
+wait_three_second(4)
+puts show_num(5)
+puts show_num(6)
+wait_three_second(7)
+puts show_num(8)
+puts show_num(9)
+wait_three_second(10)
