@@ -37,7 +37,8 @@ gem -v
 ```
 
 `gem install Gem名` でgemをインストールしたりできる。
-*Gem document [https://guides.rubygems.org/]
+*Gem document
+>https://guides.rubygems.org/
 
 ---
 
@@ -56,12 +57,14 @@ gem update [GEMNAME]
 
 ---
 
-## Bundler について
+## Bundlerについて
+
 ---
 ### bundler
 >Gemの一種、Gem同士の依存関係とバージョンの管理
 
-*Bundle gem document [https://bundler.io/man/bundle-install.1.html]
+*Bundle gem document
+>https://bundler.io/man/bundle-install.1.html
 
 ```
 bundle init
