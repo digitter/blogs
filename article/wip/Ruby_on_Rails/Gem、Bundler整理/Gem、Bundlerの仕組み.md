@@ -8,12 +8,12 @@ footer: "by kazuki tanida"
 <!-- prerender: true -->
 <!-- class: invert -->
 
-# Ruby、Rails初学者向け - Gem、Bundlerの仕組み
+# Gem、Bundlerの仕組み
 
 ---
 ## Package managing
-・rbenv
-・Ruby-build
+---
+### rbenv, Ruby-build
 
 ruby-buildは、PC上で異なるバージョンのRubyをコンパイルしたり、インストールする。
 rbenvで色々なバージョンのRubyをインストールしたり、ディレクトリごとに使うRubyのバージョン指定をしたりできるコマンドを使える。
@@ -24,8 +24,10 @@ rbenvで色々なバージョンのRubyをインストールしたり、ディ�
 ---
 
 ## RubyGems
-RubyGemsとは、Ruby用のパッケージ管理システム
-RubyがRubyGemsを標準ライブラリとして内包している。
+---
+### RubyGemsとは
+>Ruby用のパッケージ管理システム
+>RubyがRubyGemsを標準ライブラリとして内包している。
 
 ```ruby
 ruby -v
@@ -39,12 +41,12 @@ gem -v
 
 ---
 
-## RubyGems自体のupdate
+### RubyGems自体のupdate
 ```
 gem update —system
 ```
 
-## 特定のgemをバージョンアップする
+### 特定のgemをバージョンアップする
 ```
 gem update [GEMNAME]
 ```
@@ -55,6 +57,8 @@ gem update [GEMNAME]
 ---
 
 ## Bundler について
+---
+### bundler
 >Gemの一種、Gem同士の依存関係とバージョンの管理
 
 *Bundle gem document [https://bundler.io/man/bundle-install.1.html]
@@ -71,7 +75,7 @@ bundle install
 
 ---
 
-## bundle install 時のgemのインストール先
+### bundle install 時のgemのインストール先
 
 デフォルトでは`gem env`で確認できる`INSTALLATION DIRECTORY`にgemはインストールされるが、別の場所に変えることも可能。
 
@@ -83,7 +87,7 @@ bundle install —path vendor/bundle --jobs=4
 
 ---
 
-## bunlderの設定確認
+### bunlderの設定確認
 ```
 bundle config
 
@@ -99,7 +103,7 @@ bundlerがどこからgemを探すかは、プロジェクトルートの下の.
 
 ---
 
-## Bundle updateについて
+### Bundle updateについて
 >Gemfileをもとにgemの更新やインストールを行います。lockファイルも変わる.
 
 ```
@@ -114,7 +118,7 @@ bundle update 特定のgem
 
 ---
 
-## GemfileでインストールしたGemを削除する
+### GemfileでインストールしたGemを削除する
 
 1. RubyGems自体から削除
 ```
