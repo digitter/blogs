@@ -1,6 +1,5 @@
 ---
 marp: true
-header: "**Tech mesia**"
 paginate: true
 footer: "by kazuki tanida"
 ---
@@ -9,6 +8,8 @@ footer: "by kazuki tanida"
 <!-- class: invert -->
 
 # rbenv利用方法
+
+---
 
 ## Package managing
 
@@ -47,7 +48,8 @@ Use 'rbenv install --list-all' to show all local versions.
 
 ---
 
-## 特定のversionのRubyをインストール
+### 特定のversionのRubyをインストール
+
 ```
 rbenv install 2.x.x
 ```
@@ -78,17 +80,36 @@ local versionで指定可能
 ```
 rbenv local 2.x.x
 rbenv rehash
-# 新しくインストールしたRubyや、その拡張機能の追加をrbenvに反映させるためもの
+# rehashは新しくインストールしたRubyや、その拡張機能の追加をrbenvに反映させるためもの
 ```
 
 globalに指定したい場合は
 ```
 rbenv global 2.x.x
+rbenv rehash
 ```
 
 ---
 
-### rbenv rehash面倒...
+### rbenv rehashが面倒...
 
 gem `rbenv-gem-rehash`をインストールしておくと
 毎回の`rbenv rehash`が不要になります。
+
+---
+
+## railsをインストールしたい場合
+
+---
+
+```
+# ruby -v で先ほどインストールしたversionが適用できているか確認
+
+ruby -v
+
+# Railsをインストール
+
+gem install rails
+
+rails new アプリ名 でRailsアプリ作成
+```
