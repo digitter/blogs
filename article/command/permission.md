@@ -69,7 +69,7 @@ chmod ugo=rwx hello
 
 ---
 
-### change mode - chmod 数字オプションver
+## change mode - chmod 数字オプションver
 
 ```
 chmod *** ファイル名orディレクトリ名

@@ -62,10 +62,11 @@ irb(main):002:0> book_instance.save
 >transactionとはここではデータベースにデータ保存しようとする処理と捉えてください。
 
 つまり、空っぽで投稿すると、検証に引っかかって保存されませんでした !!!
+*ちなみに戻り値としては`false`が返ってきています。
 
 ---
 
-## validationのエラーメッセージの表示する
+## validationのエラーメッセージの表示する方法
 
 # エラーメッセージはあらかじめ用意されている !
 
@@ -109,7 +110,7 @@ irb(main):004:0> book_instance.errors.full_messages
 
 ### バリデーションエラーをViewで表示する
 
-配列の形式でエラーメッセージを取得できたので後は、eachメソッドで分解してやるだけ！
+`["Title can't be blank"]`と配列の形式でエラーメッセージを取得できたので後はeachメソッドなどで分解してやるだけ！
 
 Rails Guide を参考にしてみて下さい !
 https://railsguides.jp/active_record_validations.html#%E3%83%90%E3%83%AA%E3%83%87%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%A8%E3%83%A9%E3%83%BC%E3%82%92%E3%83%93%E3%83%A5%E3%83%BC%E3%81%A7%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B

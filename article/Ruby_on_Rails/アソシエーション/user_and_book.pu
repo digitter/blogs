@@ -1,0 +1,20 @@
+@startuml
+ title user:book(1:N)
+
+ user ---{ book
+
+ class user {
+   id
+   title
+   body
+   user_id
+ }
+
+ class book {
+   id
+   title
+   body
+   user_id
+ }
+
+@enduml

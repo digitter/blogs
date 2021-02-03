@@ -1,0 +1,20 @@
+@startuml
+  title Gitチーム開発フロー
+
+  actor Bさん
+  actor Cさん
+
+  Bさん -> プルリクエスト: Bさんがブランチをpush
+  Cさん -> プルリクエスト: Cさんがブランチをpush
+
+  プルリクエスト -> リモートdevelopブランチ: Bさんのコミット内容がmergeされる
+  プルリクエスト -> リモートdevelopブランチ: Cさんのコミット内容がmergeされる
+
+
+  group Aさんがやること
+    リモートdevelopブランチ -> ローカルのdevelopブランチ: pullでリモートdevelopの内容を取り込み
+    ローカルのdevelopブランチ -> ローカルの他の作業ブランチ: git merge origin/develop で取り込み
+    actor Aさん
+  end
+
+@enduml
