@@ -325,11 +325,11 @@ query {
 
 # まず最初に...
 
-*継承先 `GraphQL::Schema::RelayClassicMutation`から、
+<!-- *継承先 `GraphQL::Schema::RelayClassicMutation`から、
 `::RelayClassicMutation`を削除しないとデーター投稿できませでした。
 
 公式APIより引用
->This class is part of a private API. You should avoid using this class if possible, as it may be removed or be changed in the future.
+>This class is part of a private API. You should avoid using this class if possible, as it may be removed or be changed in the future. -->
 
 ```rb
 module Mutations
