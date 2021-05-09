@@ -22,7 +22,7 @@ paginate: true
 ## 開発環境
 
 - Mac
-- [C言語 VScodeで環境構築]()
+- C言語 VScodeで環境構築 WIP
 
 ---
 
@@ -118,7 +118,7 @@ Hello World !
 - return 0; は正常終了を意味する。
 - reutrn 0以外で以上終了となる。
 
-ちなみにC99, 999年に策定されたC言語の規格以降では `return 0;` の記述が無くても動作します。
+ちなみにC99という1999年に策定されたC言語の規格以降では `return 0;` の記述が無くても動作します。
 
 ---
 
@@ -293,9 +293,8 @@ s3 = abcde
 
 変数が初期化された後の行でbreak pointを指定。(赤丸のやつ)
 
-![配列の確認](./images/check_array.png)
+![配列の確認](https://raw.githubusercontent.com/digitter/blogs/master/article/C%E8%A8%80%E8%AA%9E%E5%85%A5%E9%96%80/images/check_array.png?token=AJRSEUFWMIYPJLZB5EWI4BDAS7CSU)
 
 実際にあった。
 
 ---
-
