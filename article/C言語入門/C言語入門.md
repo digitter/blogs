@@ -4,9 +4,17 @@ paginate: true
 ---
 
 <!-- prerender: true -->
+<!-- class: invert -->
 
 # C言語 入門
 >他のプログラミング言語を何かしら触ったあることを前提とします
+
+---
+
+関連リンク
+
+- [VScodeを利用したC言語の開発環境]()
+- [リンク]()
 
 ---
 
@@ -268,6 +276,8 @@ string2 = Hello World!
 
 ---
 
+scanf関数で標準入力した文字を配列に格納
+
 ```c
 #include <stdio.h>
 
@@ -298,3 +308,5 @@ s3 = abcde
 実際にあった。
 
 ---
+
+## 関数
