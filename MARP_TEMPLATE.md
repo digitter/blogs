@@ -1,6 +1,6 @@
 ---
 marp: true
-header: "**Tech mesia**"
+header: "**Tech Boyaki**"
 paginate: true
 footer: "by kazuki tanida"
 ---
