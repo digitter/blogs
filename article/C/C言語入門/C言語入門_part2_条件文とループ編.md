@@ -1,20 +1,30 @@
-# C言語入門 part2 条件文とループ編
+## 目次
 
 <!-- TOC -->
 
-- [C言語入門 part2 条件文とループ編](#c言語入門-part2-条件文とループ編)
-  - [if](#if)
-  - [比較演算子](#比較演算子)
-  - [三項演算子](#三項演算子)
-  - [switch](#switch)
-  - [論理演算子](#論理演算子)
-  - [while, do-while](#while-do-while)
-    - [while](#while)
-    - [do-while](#do-while)
-    - [break, continue](#break-continue)
-  - [for](#for)
+- [目次](#目次)
+- [関連リンク](#関連リンク)
+- [if](#if)
+- [比較演算子](#比較演算子)
+- [三項演算子](#三項演算子)
+- [switch](#switch)
+- [論理演算子](#論理演算子)
+- [while, do-while](#while-do-while)
+  - [while](#while)
+  - [do-while](#do-while)
+  - [break, continue](#break-continue)
+- [for](#for)
 
 <!-- /TOC -->
+
+---
+
+## 関連リンク
+
+- [C言語入門 part1 基本編](https://heuristic-bartik-0f9dae.netlify.app/blog/c)
+- [C言語入門 part3 wip...]()
+
+---
 
 条件文は true or false によって処理を続けるかどうかなどを決める。
 ループでも条件が true or false になるかどうかで処理を続けるか止めるかを決めている。
@@ -231,7 +241,6 @@ int main() {
 ```
 
 インクリメントしている行と、if文を逆にすると無限ループになるので気をつけましょ。。。
-
 
 ## for
 
