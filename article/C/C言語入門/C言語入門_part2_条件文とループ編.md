@@ -4,6 +4,7 @@
 
 - [目次](#目次)
 - [関連リンク](#関連リンク)
+- [関連リンク](#関連リンク-1)
 - [if](#if)
 - [比較演算子](#比較演算子)
 - [三項演算子](#三項演算子)
@@ -21,8 +22,13 @@
 
 ## 関連リンク
 
-- [C言語入門 part1 基本編](https://heuristic-bartik-0f9dae.netlify.app/blog/c)
-- [C言語入門 part3 wip...]()
+[C言語入門リスト](https://heuristic-bartik-0f9dae.netlify.app/blog/c-list)
+
+---
+
+## 関連リンク
+
+[C言語入門リスト](https://heuristic-bartik-0f9dae.netlify.app/blog/c-list)
 
 ---
 
@@ -55,7 +61,7 @@ int main() {
 }
 ```
 
-scanf()は変換指定子とアドレスを指定るやつで、
+scanf()は変換指定子とアドレスを指定するやつで、
 第二引数の &... は変数のアドレスを求める演算子しているらしい。
 
 変数、メモリ、アドレスの概念がないと理解できないですねこのへんは〜。
