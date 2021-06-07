@@ -8,6 +8,7 @@
   - [プロトタイプ宣言無しでコンパイルしてみる](#プロトタイプ宣言無しでコンパイルしてみる)
   - [プロトタイプ宣言有りでコンパイルしてみる](#プロトタイプ宣言有りでコンパイルしてみる)
 - [関数 と static 変数](#関数-と-static-変数)
+- [再帰関数](#再帰関数)
 
 <!-- /TOC -->
 
@@ -188,5 +189,31 @@ int square (int parameter) {
 
   count++;
   return y;
+}
+```
+
+## 再帰関数
+
+ある関数内で同じ関数を呼びます。
+
+Cに限らず、プログラミングをする上でよく利用されるアルゴリズムですね。
+
+ある数の階乗を求める関数を定義してみました。
+
+```c
+int factorial_of(int num);
+
+int main() {
+  int num = 3;
+  printf("%d の階乗は %d です", num, factorial_of(3));
+}
+
+int factorial_of(num) {
+  if (num == 1) {
+    return 1;
+  }
+  else {
+    return num * factorial_of(num - 1);
+  }
 }
 ```

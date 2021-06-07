@@ -6,6 +6,7 @@
 - [関連リンク](#関連リンク)
 - [関連リンク](#関連リンク-1)
 - [if](#if)
+  - [ifの省略形](#ifの省略形)
 - [比較演算子](#比較演算子)
 - [三項演算子](#三項演算子)
 - [switch](#switch)
@@ -66,6 +67,39 @@ scanf()は変換指定子とアドレスを指定するやつで、
 
 変数、メモリ、アドレスの概念がないと理解できないですねこのへんは〜。
 
+### ifの省略形
+
+if文は 中括弧 を省略する形でも書くことができます。
+
+```c
+if (input == 1)
+  printf("1が入力されました。\n");
+else if (input == 2)
+  printf("2が入力されました。\n");
+else if (input == 3)
+  printf("3が入力されました。\n");
+else
+  printf("Error!!!\n");
+```
+
+ワンラインでもOK。
+
+```c
+if (input == 1) printf("1が入力されました。\n");
+else if (input == 2) printf("2が入力されました。\n");
+else if (input == 3) printf("3が入力されました。\n");
+else printf("Error!!!\n");
+```
+
+でも、Ruby、Pythonとかで使える様な後置ifは使えない。
+
+```ruby
+input = gets.to_i
+
+# Rubyの後置ifの例
+puts input if input == 2
+```
+
 ## 比較演算子
 他の言語と同じ感じですね〜
 
@@ -102,7 +136,7 @@ int main() {
 
 ## switch
 
-switch分もある
+switch文もある
 
 ```c
 #include <stdio.h>

@@ -68,17 +68,28 @@ int numbers[]; // これはダメ
 
 ### C言語に空の配列は存在しない
 
-wip
-wip
-wip
-wip
-wip
-wip
-wip
-wip
-wip
-wip
-wip
+C言語では言語レベルで空の配列というものは存在しない。
+
+空の配列を定義するとエラーになる。
+
+```c
+#include <stdio.h>
+
+int main() {
+  int int_array1[]; // 空の定義はNG
+  int int_array2[3]; // サイズ指定の定義はOK
+  int int_array3[] = {1, 2, 3, 4, 5}; // 初期化時にサイズを自動で決めるのはOK
+
+  char string_array1[]; // 空の定義はNG
+  char string_array2[3]; // サイズ指定の定義はOK
+  char string_array3[] = "Hello, World"; // 初期化時にサイズを自動で決めるのはOK
+  char string_array4[] = {'H', 'e', 'l', 'l', 'o', 'W', 'o', 'r', 'l', 'd'};
+}
+```
+
+[C言語における配列](#C言語における配列) で確認した通り数値の配列が10要素格納できる配列に5つだけ要素を指定した場合、残りの5つは `0` が格納されていました。
+
+他の言語では空の配列という概念がありますが、Cは違うので注意！！！
 
 ## 配列要素へのアクセス
 
