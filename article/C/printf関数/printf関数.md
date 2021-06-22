@@ -1,21 +1,18 @@
-# printf関数 オプション
-
 基本的に man 3 printf の説明を訳したものとなります。
 
 WIPの部分もありますが、徐々に例を足したり、説明を加えていこうと思います。
 
 <!-- TOC -->
 
-- [printf関数 オプション](#printf関数-オプション)
-  - [printfとは](#printfとは)
-  - [printfのフォーマット指定子のプロトタイプ](#printfのフォーマット指定子のプロトタイプ)
-    - [フラグ (flag)](#フラグ-flag)
-    - [(最小の)フィールド幅 (width)](#最小のフィールド幅-width)
-    - [精度 (precision)](#精度-precision)
-    - [変換修飾子 (length)](#変換修飾子-length)
-    - [printfの変換指定子 (conversion specifiers)](#printfの変換指定子-conversion-specifiers)
-      - [a, Aの例](#a-aの例)
-  - [その他](#その他)
+- [printfとは](#printfとは)
+- [printfのフォーマット指定子のプロトタイプ](#printfのフォーマット指定子のプロトタイプ)
+  - [フラグ (flag)](#フラグ-flag)
+  - [(最小の)フィールド幅 (width)](#最小のフィールド幅-width)
+  - [精度 (precision)](#精度-precision)
+  - [変換修飾子 (length)](#変換修飾子-length)
+  - [printfの変換指定子 (conversion specifiers)](#printfの変換指定子-conversion-specifiers)
+    - [a, Aの例](#a-aの例)
+- [その他](#その他)
 
 <!-- /TOC -->
 
