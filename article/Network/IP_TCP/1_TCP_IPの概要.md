@@ -1,6 +1,17 @@
-## ネットワークの基本知識
+## 目次
 
-***
+<!-- TOC -->
+
+- [目次](#目次)
+- [ネットワークの基本知識](#ネットワークの基本知識)
+  - [規模に応じた、色々な(コンピューターの)ネットワーク](#規模に応じた色々なコンピューターのネットワーク)
+  - [TCP/IP による通信のルールの統一](#tcpip-による通信のルールの統一)
+- [TCP/IP ネットワークモデル](#tcpip-ネットワークモデル)
+  - [PDUの概要](#pduの概要)
+
+<!-- /TOC -->
+
+## ネットワークの基本知識
 
 まず前提としてネットワークの基本には以下の概念がある。
 
@@ -36,7 +47,7 @@
 ISO(international organization for standardization)がベンダーに依存しない形でシステムを接続するためにOSI(open system interconnection)というネットワークモデルを策定しました。
 ただし実用面では普及しなかったため、別の組織が新しくTCP/IPモデルを考案しました。実際にはTCP/IPモデルを目にすることが多いかと思います。
 
-![画像](image/osi_vs_tcp_ip.jpg)
+![画像](https://raw.githubusercontent.com/digitter/blogs/master/article/Network/IP_TCP/image/osi_vs_tcp_ip.jpg)
 
 各層に様々なプロトコルが存在します。
 
@@ -76,4 +87,4 @@ PDU(Protocal Data Unit)と呼ばれる。
 物理層からアプリケーション層にいくごとにヘッダとトレーラーは外されていく。(decapsulation デカプセル化)
 プロトコルによってトレーラは利用しないこともある。
 
-![画像](image/PDU.jpg)
+![画像](https://github.com/digitter/blogs/blob/master/article/Network/IP_TCP/image/PDU.jpg?raw=true)
