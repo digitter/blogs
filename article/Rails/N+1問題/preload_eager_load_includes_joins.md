@@ -7,7 +7,7 @@
   - [usersテーブル](#usersテーブル)
   - [articlesテーブル](#articlesテーブル)
   - [favoritesテーブル](#favoritesテーブル)
-- [リレーションは以下の前提で進めます。](#リレーションは以下の前提で進めます)
+  - [リレーションは以下の前提で進めます](#リレーションは以下の前提で進めます)
 - [preload](#preload)
   - [役割](#役割)
   - [使い方](#使い方)
@@ -63,7 +63,7 @@ users, articles, favorites
 - created_at
 - updated_at
 
-## リレーションは以下の前提で進めます。
+### リレーションは以下の前提で進めます
 
 ![画像](https://raw.githubusercontent.com/digitter/blogs/master/article/Rails/N%2B1%E5%95%8F%E9%A1%8C/images/user_article_favorite.png)
 
@@ -74,6 +74,8 @@ users, articles, favorites
 クエリで取得したデータをあらかじめ、メモリ上に格納してくれる。
 
 ### 使い方
+
+- `User.preload(:articles).first`
 
 >Userを取得して、そのUserの主キー(id)を外部キー(user_id)に持つArticleを取得する。
 
@@ -114,7 +116,7 @@ irb(main):005:0> User.preload(:articles, articles: :favorites).first
 
 ### 使い方
 
->User.eager_load(:articles).first
+- `User.eager_load(:articles).first`
 
 ```sql
 irb(main):008:0> User.eager_load(:articles).first
@@ -123,7 +125,7 @@ irb(main):008:0> User.eager_load(:articles).first
 => #<User id: 1, email: "a@a.a", name: "aaa", introduction: "", profile_image_id: "983049398d7c4b8e6b0f860a726065b4631fe62c78611bb89a...", created_at: "2020-11-15 14:25:56", updated_at: "2021-04-20 15:39:00">
 ```
 
->User.eager_load(:articles, articles: :favorites).first
+- `User.eager_load(:articles, articles: :favorites).first`
 
 ```sql
 irb(main):013:0> User.eager_load(:articles, articles: :favorites).first
@@ -152,7 +154,7 @@ LEFT JOIN するということはテーブル全部読み込みするので紐�
 
 includes は基本的には preload で挙動する。
 
-関連先に対して絞り込み条件を指定した場合は、eager_loadの挙動になる。
+関連先に対して絞り込み条件を指定した場合は、eager_load の挙動になる。
 
 ## 使い方
 

@@ -5,21 +5,21 @@
 - [目次](#目次)
 - [この記事は？](#この記事は)
 - [注意書き](#注意書き)
-- [empty?とexists?とblank?とpresent?の対応表🤔😵‍💫](#emptyとexistsとblankとpresentの対応表🤔😵‍💫)
+- [empty?とexists?とblank?とpresent?の対応表](#emptyとexistsとblankとpresentの対応表)
 - [empty?(空っぽですか？)](#empty空っぽですか)
-	- [定義元(Rubyのいくつかの標準のクラス)](#定義元rubyのいくつかの標準のクラス)
-	- [定義元(ActiveRecord::Relation)](#定義元activerecordrelation)
-	- [検証](#検証)
+  - [定義元(Rubyのいくつかの標準のクラス)](#定義元rubyのいくつかの標準のクラス)
+  - [定義元(ActiveRecord::Relation)](#定義元activerecordrelation)
+  - [検証](#検証)
 - [exists?(存在する？)](#exists存在する)
-	- [定義元(Rubyの標準のFileクラス)](#定義元rubyの標準のfileクラス)
-	- [定義元(ActiveRecord::RelationのFinderMethods)](#定義元activerecordrelationのfindermethods)
-	- [検証](#検証-1)
+  - [定義元(Rubyの標準のFileクラス)](#定義元rubyの標準のfileクラス)
+  - [定義元(ActiveRecord::RelationのFinderMethods)](#定義元activerecordrelationのfindermethods)
+  - [検証](#検証-1)
 - [blank?(空欄ですか？)](#blank空欄ですか)
-	- [定義元(Objectクラスにモンキーパッチ)](#定義元objectクラスにモンキーパッチ)
-	- [定義元(ActiveRecord::Relation)](#定義元activerecordrelation-1)
-	- [検証](#検証-2)
+  - [定義元(Objectクラスにモンキーパッチ)](#定義元objectクラスにモンキーパッチ)
+  - [定義元(ActiveRecord::Relation)](#定義元activerecordrelation-1)
+  - [検証](#検証-2)
 - [present?(存在しますか？)](#present存在しますか)
-	- [定義元(Objectクラスでモンキーパッチ)](#定義元objectクラスでモンキーパッチ)
+  - [定義元(Objectクラスでモンキーパッチ)](#定義元objectクラスでモンキーパッチ)
 - [まとめ](#まとめ)
 
 <!-- /TOC -->
@@ -43,7 +43,7 @@ ActiveRecord::Relationのコード例を全て Book.all として表現してい
 必要であればwhereなどに置き換えて読み進めてください。
 
 
-## empty?とexists?とblank?とpresent?の対応表🤔😵‍💫
+## empty?とexists?とblank?とpresent?の対応表
 
 |定義元|empty?|exists?|blank?|present?|
 |--|--|--|--|--|
@@ -68,6 +68,17 @@ ActiveRecord::Relationにも存在する。
 RubyのString、Array、Hashなどに標準で `empty?` メソッドというものがありますが、これはActiveRecord::Relationにも定義されています。
 
 >https://github.com/rails/rails/blob/main/activerecord/lib/active_record/relation.rb#L274-L281
+
+```ruby
+# Returns true if there are no records.
+def empty?
+	if loaded?
+		records.empty?
+	else
+		!exists?
+	end
+end
+```
 
 ### 検証
 
