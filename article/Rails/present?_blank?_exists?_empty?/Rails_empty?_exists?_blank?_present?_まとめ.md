@@ -220,7 +220,7 @@ Book.new.blank?
 
 - ActiveRecord::Reation(使えるがやめた方がいい。。。)
 
-この使い方はやばいです。絶対やらない方がいいです。
+次の使い方はやばいです。絶対やらない方がいいです。
 
 blank?かをどうかを確認したいだけなのに、該当のレコードを全て取得してオブジェクトに変換した上でblank?メソッドを利用しています。
 
@@ -232,16 +232,14 @@ Book.all.blank?
   Book Load (37.7ms)  SELECT "books".* FROM "books"
 => false
 
-# 代わりにempty?で十分。 (empty? はオブジェクトを生成しない。)
-Book.all.empty?
-  Book Exists (1.7ms)  SELECT  1 AS one FROM "books" LIMIT ?  [["LIMIT", 1]]
-=> false
+# 代わりにexists?で十分。 (exists? はオブジェクトを生成しない。)
+Book.all.exists?
+  Book Exists (0.9ms)  SELECT  1 AS one FROM "books" LIMIT ?  [["LIMIT", 1]]
+=> true
 ```
 
 既に存在するオブジェクトに対して使うのであれば、問題ないです。
 ```ruby
-books = Book.all
-
 # これは問題ない。
 books.blank?
 => false
@@ -272,8 +270,12 @@ Book.all.present?
   Book Load (29.9ms)  SELECT "books".* FROM "books"
 => true
 
-# これはOK
-books = Book.all
+# 代わりにempty?で十分。 (empty? はオブジェクトを生成しない。)
+
+```
+
+既に存在するオブジェクトに対して使うのであれば、問題ないです。
+```ruby
 books.present?
 => true
 ```
@@ -282,4 +284,4 @@ books.present?
 
 どこに定義されてるか見ると、使うケースがわかる。
 
-あとblank?とpresent?はちょっと気をつけよっと。。。😥
+blank?とpresent?はパフォーマンスの面でちょっと気をつけた方がいいケースがありました。😥
