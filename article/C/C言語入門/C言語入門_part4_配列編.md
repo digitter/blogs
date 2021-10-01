@@ -20,6 +20,7 @@
 - [文字列とは文字の配列](#文字列とは文字の配列)
   - [文字の配列の残りの要素](#文字の配列の残りの要素)
   - [文字列の長さを調べる](#文字列の長さを調べる)
+  - [stdlib.hの文字列関数](#stdlibhの文字列関数)
   - [string.hの文字列関数](#stringhの文字列関数)
 
 <!-- /TOC -->
@@ -351,6 +352,18 @@ str_length is 12
 文字列の最後の文字を取得するには `strlen() - 1` 番目の要素を取得すればよいですかね。(あまりそういうケースはないと思いますが。。。)
 
 他にも様々な関数が用意されています。
+
+### stdlib.hの文字列関数
+
+|関数|意味|
+|---|---|
+|int atoi(文字列)|ASCII to integerを意味する。文字列をint型に変換する。最初の文字が数値出ない場合または、数字が無い場合は0を返却します。|
+|double atof(文字列)|ASCII to floatを意味する。文字列をfloat型の値に変換する。最初の文字が数値出ない場合または、数字が無い場合は0.0を返却します。|
+|long int atol(文字列)|ASCII to long int.文字列をlong intege型の値に変換する。最初の文字が数値出ない場合または、数字が無い場合は0を返却します。|
+
+atoi() lacks error handling
+
+it is recommended to use strtol() if you want to make sure that proper error handling is done.
 
 ### string.hの文字列関数
 
