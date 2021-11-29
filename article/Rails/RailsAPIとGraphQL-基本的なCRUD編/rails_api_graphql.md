@@ -314,6 +314,10 @@ query {
 
 ---
 
+これでCRUDにあたるReadができました！
+
+---
+
 # Mutation
 >データを投稿する、更新、削除する
 
@@ -758,4 +762,4 @@ Completed 200 OK in 22ms (Views: 0.3ms | ActiveRecord: 1.4ms | Allocations: 3386
 ---
 
 MutationでCRUD処理に当たる
-CUDをできました！
+Create, Update, Deleteができました！
